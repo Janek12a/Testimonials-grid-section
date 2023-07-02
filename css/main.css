@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.containers {
+  padding: 2em;
+  font-size: 1.3rem;
+}
+
+.container {
+  padding: 2em;
+  margin-bottom: 1em;
+}
+.container__user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+.container__photo {
+  border-radius: 50%;
+}
+.container__h2 {
+  margin: 0.5em 0;
+}
+
+.first {
+  border-radius: 10px;
+  overflow: hidden;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: 80%;
+}
+.first__photo {
+  border: 3px solid hsla(263, 100%, 67%, 0.9);
+}
+.first__status {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.first__text {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.second {
+  border-radius: 10px;
+  overflow: hidden;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 19%, 35%);
+}
+.second__status {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.second__text {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.third {
+  border-radius: 10px;
+  overflow: hidden;
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+.third__status {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.third__text {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+.fourth {
+  border-radius: 10px;
+  overflow: hidden;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(219, 29%, 14%);
+}
+.fourth__photo {
+  border: 3px solid hsl(263, 55%, 52%);
+}
+.fourth__status {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.fourth__text {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.fifth {
+  border-radius: 10px;
+  overflow: hidden;
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+}
+.fifth__status {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.fifth__text {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+@media (min-width: 996px) {
+  .containers {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    padding: 8em;
+    gap: 1.5em;
+  }
+  .container {
+    margin: 0;
+  }
+  .first {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  .second {
+    grid-column: 3/3;
+    grid-row: 1;
+  }
+  .third {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .fourth {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+  .fifth {
+    grid-row: 1/-1;
+  }
+}/*# sourceMappingURL=main.css.map */

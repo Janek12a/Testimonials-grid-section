@@ -1,0 +1,170 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+
+$moderate-violet: hsl(263, 55%, 52%);
+$grayish-blue: hsl(217, 19%, 35%);
+$blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(0, 0%, 81%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	background-color: $light-grayish-blue;
+}
+
+.containers {
+	padding: 2em;
+	font-size: 1.3rem;
+}
+
+.container {
+	padding: 2em;
+	margin-bottom: 1em;
+
+	&__user {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap:0.5em;
+	
+	} 
+	&__photo {
+		border-radius: 50%;
+	}
+
+	&__h2 {
+		margin: 0.5em 0;
+	}
+}
+
+
+
+@mixin border {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.first {
+	@include border;
+	color: $white;
+	background-color: $moderate-violet;
+	background-image: url(../images/bg-pattern-quotation.svg);
+	background-repeat: no-repeat;
+	background-position-y: top;
+	background-position-x:80%;
+
+	&__photo {
+		border: 3px solid hsl(263, 100%, 67%, 0.9);
+	}
+
+	&__status {
+		color: hsl(0, 0%, 100%, 0.5);
+	}
+
+	&__text {
+		color: hsl(0, 0%, 100%, 0.7);
+	}
+}
+
+.second {
+	@include border;
+	color: $white;
+	background-color: $grayish-blue;
+
+	&__status {
+		color: hsl(0, 0%, 100%, 0.5);
+	}
+	&__text {
+		color: hsl(0, 0%, 100%, 0.7);
+	}
+}
+
+.third {
+	@include border;
+	color: $grayish-blue;
+	background-color: $white;
+
+	&__status {
+		color: hsl(217, 19%, 35%, 0.5);
+	}
+	&__text {
+		color: hsl(217, 19%, 35%, 0.7);
+	}
+}
+
+.fourth {
+	@include border;
+	color: $white;
+	background-color: $blackish-blue;
+
+	&__photo {
+		border: 3px solid $moderate-violet;
+	}
+
+	&__status {
+		color: hsl(0, 0%, 100%, 0.5);
+	}
+
+	&__text {
+		color: hsl(0, 0%, 100%, 0.7);
+	}
+}
+
+.fifth {
+	@include border;
+	color: $grayish-blue;
+	background-color: $white;
+
+	&__status {
+		color: hsl(217, 19%, 35%, 0.5);
+	}
+	&__text {
+		color: hsl(217, 19%, 35%, 0.7);
+	}
+}
+
+
+@media (min-width: 996px) {
+	.containers {
+		display: grid;
+		justify-content: center;
+		grid-template-columns: repeat(4, auto);
+		grid-template-rows: repeat(2, auto);
+		padding:8em;
+		gap: 1.5em;
+	}
+
+	.container {
+		margin: 0;
+	}
+
+	.first {
+		grid-column: 1/3;
+		grid-row: 1;
+	}
+
+	.second {
+		grid-column: 3/3;
+		grid-row: 1;
+	}
+
+	.third {
+		grid-column: 1/2;
+		grid-row: 2;
+	}
+	.fourth {
+		grid-column: 2/4;
+		grid-row: 2;
+	}
+
+	.fifth {
+		grid-row: 1/-1;
+	}
+}
